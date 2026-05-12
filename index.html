@@ -63,5 +63,19 @@ body {
 }       
 
 
+     /* Navigation */
+        nav {
+            position: fixed; top: 0; width: 100%;
+            background: var(--nav-bg);
+            backdrop-filter: blur(12px);
+            padding: 15px 5%;
+            display: flex; justify-content: space-between; align-items: center;
+            z-index: 2500; border-bottom: 1px solid var(--border);
+        }
+        .logo { font-weight: 700; font-size: 1.2rem; color: var(--primary); z-index: 3000; }
+
+        .nav-links { display: flex; gap: 30px; align-items: center; }
+        .nav-links a { text-decoration: none; color: var(--text-main); font-weight: 600; font-size: 0.9rem; transition: 0.2s; }
+        .nav-links a:hover { color: var(--accent); }
 
 
