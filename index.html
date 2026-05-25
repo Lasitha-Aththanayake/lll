@@ -108,7 +108,113 @@ body {
         .mv-card { background: var(--bg-card); padding: 35px; border-radius: 20px; box-shadow: 0 15px 35px rgba(0,0,0,0.1); border-bottom: 4px solid var(--accent); }
 
 
+ .section { margin-bottom: 60px; }
+        .section-title { font-size: 1.6rem; color: var(--primary); margin-bottom: 25px; border-left: 5px solid var(--accent); padding-left: 15px; }
+        .content-box { background: var(--bg-card); padding: 30px; border-radius: 15px; border: 1px solid var(--border); }
 
+        .dept-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; }
+        .dept-item { background: var(--primary); color: white; padding: 15px; border-radius: 10px; font-size: 0.85rem; text-align: center; font-weight: 600; }
+
+
+        /* ශිෂ්‍ය සංගමයේ ප්‍රධාන කහ පැහැති පුවරුව */
+.union-header { 
+    background: var(--accent); 
+    color: #000; 
+    padding: 40px 20px; 
+    border-radius: 20px; 
+    text-align: center; 
+    margin: 80px 0 40px; 
+}
+
+/* අනුකමිටු කාඩ්පත් අසුරන දැල (Grid) */
+.grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 20px; 
+}
+
+/* තනි අනුකමිටු කාඩ්පතක පෙනුම */
+.card { 
+    background: var(--bg-card); 
+    padding: 25px; 
+    border-radius: 18px; 
+    border: 1px solid var(--border); 
+    transition: 0.3s; 
+    cursor: pointer; 
+}
+
+/* මවුස් එක කාඩ්පත උඩට ගෙනිච්ච විට සිදුවන වෙනස (Hover Effect) */
+.card:hover { 
+    transform: translateY(-5px); 
+    border-color: var(--accent); 
+}
+
+/* Pop-up එක ඇතුළේ ඇති ලැයිස්තු (Bullet points) */
+.styled-list { 
+    list-style: none; 
+    margin-top: 10px; 
+}
+.styled-list li { 
+    padding: 5px 0; 
+    display: flex; 
+    align-items: start; 
+    gap: 10px; 
+}
+.styled-list li::before { 
+    content: "•"; 
+    color: var(--accent); 
+    font-weight: bold; 
+}
+
+/* මතු වන පොප්-අප් කොටුවේ පසුබිම (Modal Container) */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 4000; 
+    left: 0; top: 0; 
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.85); 
+    backdrop-filter: blur(8px); 
+    align-items: center; 
+    justify-content: center;
+    opacity: 0; 
+    transition: opacity 0.3s ease;
+}
+
+/* පොප්-අප් එක ඕපන් වූ විට පෙනෙන ආකාරය */
+.modal.show { 
+    display: flex; 
+    opacity: 1; 
+}
+
+/* පොප්-අප් එක ඇතුළේ ඇති සුදු පැහැති තොරතුරු කොටුව */
+.modal-content { 
+    background: var(--bg-card); 
+    padding: 35px; 
+    border-radius: 25px; 
+    width: 90%; 
+    max-width: 500px; 
+    position: relative; 
+    transform: translateY(20px); 
+    transition: transform 0.3s ease;
+    max-height: 80vh; 
+    overflow-y: auto;
+}
+
+/* පොප්-අප් එක ඕපන් වන විට කොටුව ඉහළට මතු වන ඇනිමේෂන් එක */
+.modal.show .modal-content { 
+    transform: translateY(0); 
+}
+
+/* පොප්-අප් එක වසා දමන (X) බටන් එක */
+.close-btn { 
+    position: absolute; 
+    right: 20px; 
+    top: 15px; 
+    font-size: 30px; 
+    cursor: pointer; 
+    color: var(--text-sub); 
+}
 
 
         
