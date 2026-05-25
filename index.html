@@ -217,4 +217,43 @@ body {
 }
 
 
+/* පිටුවේ පහළම කොටස (Footer) */
+footer { 
+    background: var(--bg-card); 
+    padding: 40px 20px; 
+    text-align: center; 
+    border-top: 1px solid var(--border); 
+    margin-top: 60px; 
+}
+
+/* ජංගම දුරකථන සඳහා විශේෂ සැකසුම් (Mobile Adjustments) */
+@media (max-width: 768px) {
+    .hamburger { 
+        display: flex; 
+    }
+    
+    .nav-links {
+        position: fixed; 
+        top: 0; 
+        right: -100%; 
+        height: 100vh; 
+        width: 80%;
+        background: var(--nav-bg); 
+        flex-direction: column; 
+        justify-content: center;
+        transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1); 
+        box-shadow: -10px 0 30px rgba(0,0,0,0.2);
+    }
+    
+    .nav-links.active { 
+        right: 0; 
+    }
+    
+    .nav-links a { 
+        font-size: 1.2rem; 
+        margin: 15px 0; 
+    }
+}
+
+
         
