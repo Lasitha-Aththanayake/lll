@@ -4,20 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>දේශීය වෛද්‍ය පීඨය | කොළඹ විශ්ව විද්‍යාලය</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Noto+Sans+Sinhala:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://googleapis.com" rel="stylesheet">
     <style>
         :root {
-            --bg-body: #030303;
-            --bg-card: #ff0033;
-            --text-main: #00ff66;
+            --bg-body: #ffffff;
+            --bg-card: #f8fafc;
+            --text-main: #0f172a;
             --text-sub: #64748b;
-            --primary: #1c29e8;
+            --primary: #800000;
             --accent: #d4af37;
             --nav-bg: rgba(255, 255, 255, 0.98);
             --border: #e2e8f0;
-            --hero-grad: linear-gradient(135deg, #1e5128 0%, #064e3b 100%);
+            --hero-grad: linear-gradient(135deg, #800000 0%, #4a0000 100%);
         }
-
         [data-theme="dark"] {
             --bg-body: #0f172a;
             --bg-card: #1e293b;
@@ -27,263 +26,116 @@
             --accent: #fbbf24;
             --nav-bg: #1e293b;
             --border: #334155;
+            --hero-grad: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
         }
-        
-* { 
-    margin: 0; 
-    padding: 0; 
-    box-sizing: border-box; 
-    transition: background 0.3s, color 0.3s; 
-}
-
-body {  
-    font-family: 'Inter', 'Noto Sans Sinhala', sans-serif;  
-    background-color: var(--bg-body);  
-    color: var(--text-main);  
-    line-height: 1.7;
-    scroll-behavior: smooth;
-    overflow-x: hidden;
-}
-
-        
-* { 
-    margin: 0; 
-    padding: 0; 
-    box-sizing: border-box; 
-    transition: background 0.3s, color 0.3s; 
-}
-
-body {  
-    font-family: 'Inter', 'Noto Sans Sinhala', sans-serif;  
-    background-color: var(--bg-body);  
-    color: var(--text-main);  
-    line-height: 1.7;
-    scroll-behavior: smooth;
-    overflow-x: hidden;
-}       
-
-
-     /* Navigation */
-        nav {
-            position: fixed; top: 0; width: 100%;
-            background: var(--nav-bg);
-            backdrop-filter: blur(12px);
-            padding: 15px 5%;
-            display: flex; justify-content: space-between; align-items: center;
-            z-index: 2500; border-bottom: 1px solid var(--border);
-        }
-        .logo { font-weight: 700; font-size: 1.2rem; color: var(--primary); z-index: 3000; }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; transition: background 0.3s, color 0.3s; }
+        body { font-family: 'Inter', 'Noto Sans Sinhala', sans-serif; background-color: var(--bg-body); color: var(--text-main); line-height: 1.7; scroll-behavior: smooth; overflow-x: hidden; padding-top: 70px; }
+        nav { position: fixed; top: 0; width: 100%; background: var(--nav-bg); backdrop-filter: blur(12px); padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; z-index: 2500; border-bottom: 1px solid var(--border); }
+        .logo { font-weight: 700; font-size: 1.2rem; color: var(--primary); }
         .nav-links { display: flex; gap: 30px; align-items: center; }
-        .nav-links a { text-decoration: none; color: var(--text-main); font-weight: 600; font-size: 0.9rem; transition: 0.2s; }
+        .nav-links a { text-decoration: none; color: var(--text-main); font-weight: 600; font-size: 0.9rem; }
         .nav-links a:hover { color: var(--accent); }
-
-
- .hamburger { display: none; cursor: pointer; flex-direction: column; gap: 6px; z-index: 3000; padding: 5px; }
-        .hamburger span { width: 30px; height: 3px; background: var(--primary); border-radius: 5px; transition: 0.4s ease-in-out; }
-
-        /* Animation for Hamburger X */
-        .hamburger.active span:nth-child(1) { transform: translateY(9px) rotate(45deg); }
-        .hamburger.active span:nth-child(2) { opacity: 0; }
-        .hamburger.active span:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
-
-
-
-    
-   /* Hero */
-        .hero {
-            padding: 160px 20px 100px;
-            background: var(--hero-grad);
-            color: white; text-align: center;
-            clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
-        }
+        .hamburger { display: none; cursor: pointer; flex-direction: column; gap: 6px; z-index: 3000; }
+        .hamburger span { width: 30px; height: 3px; background: var(--primary); border-radius: 5px; }
+        .hero { padding: 140px 20px 100px; background: var(--hero-grad); color: white; text-align: center; clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%); }
         .hero h1 { font-size: clamp(1.6rem, 5vw, 2.8rem); margin-bottom: 15px; font-weight: 700; }
-
-
-
         .container { max-width: 1140px; margin: 0 auto; padding: 40px 20px; }
-
-        /* Cards & Grids */
-        .mv-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; margin-top: -80px; }
-        .mv-card { background: var(--bg-card); padding: 35px; border-radius: 20px; box-shadow: 0 15px 35px rgba(0,0,0,0.1); border-bottom: 4px solid var(--accent); }
-
-
- .section { margin-bottom: 60px; }
+        .section { margin-bottom: 60px; padding: 30px; background: var(--bg-card); border-radius: 20px; border: 1px solid var(--border); }
         .section-title { font-size: 1.6rem; color: var(--primary); margin-bottom: 25px; border-left: 5px solid var(--accent); padding-left: 15px; }
-        .content-box { background: var(--bg-card); padding: 30px; border-radius: 15px; border: 1px solid var(--border); }
-
-        .dept-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; }
-        .dept-item { background: var(--primary); color: white; padding: 15px; border-radius: 10px; font-size: 0.85rem; text-align: center; font-weight: 600; }
-
-
-        /* ශිෂ්‍ය සංගමයේ ප්‍රධාන කහ පැහැති පුවරුව */
-.union-header { 
-    background: var(--accent); 
-    color: #000; 
-    padding: 40px 20px; 
-    border-radius: 20px; 
-    text-align: center; 
-    margin: 80px 0 40px; 
-}
-
-/* අනුකමිටු කාඩ්පත් අසුරන දැල (Grid) */
-.grid { 
-    display: grid; 
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
-    gap: 20px; 
-}
-
-/* තනි අනුකමිටු කාඩ්පතක පෙනුම */
-.card { 
-    background: var(--bg-card); 
-    padding: 25px; 
-    border-radius: 18px; 
-    border: 1px solid var(--border); 
-    transition: 0.3s; 
-    cursor: pointer; 
-}
-
-/* මවුස් එක කාඩ්පත උඩට ගෙනිච්ච විට සිදුවන වෙනස (Hover Effect) */
-.card:hover { 
-    transform: translateY(-5px); 
-    border-color: var(--accent); 
-}
-
-/* Pop-up එක ඇතුළේ ඇති ලැයිස්තු (Bullet points) */
-.styled-list { 
-    list-style: none; 
-    margin-top: 10px; 
-}
-.styled-list li { 
-    padding: 5px 0; 
-    display: flex; 
-    align-items: start; 
-    gap: 10px; 
-}
-.styled-list li::before { 
-    content: "•"; 
-    color: var(--accent); 
-    font-weight: bold; 
-}
-
-/* මතු වන පොප්-අප් කොටුවේ පසුබිම (Modal Container) */
-.modal {
-    display: none; 
-    position: fixed; 
-    z-index: 4000; 
-    left: 0; top: 0; 
-    width: 100%; height: 100%;
-    background: rgba(0,0,0,0.85); 
-    backdrop-filter: blur(8px); 
-    align-items: center; 
-    justify-content: center;
-    opacity: 0; 
-    transition: opacity 0.3s ease;
-}
-
-/* පොප්-අප් එක ඕපන් වූ විට පෙනෙන ආකාරය */
-.modal.show { 
-    display: flex; 
-    opacity: 1; 
-}
-
-/* පොප්-අප් එක ඇතුළේ ඇති සුදු පැහැති තොරතුරු කොටුව */
-.modal-content { 
-    background: var(--bg-card); 
-    padding: 35px; 
-    border-radius: 25px; 
-    width: 90%; 
-    max-width: 500px; 
-    position: relative; 
-    transform: translateY(20px); 
-    transition: transform 0.3s ease;
-    max-height: 80vh; 
-    overflow-y: auto;
-}
-
-/* පොප්-අප් එක ඕපන් වන විට කොටුව ඉහළට මතු වන ඇනිමේෂන් එක */
-.modal.show .modal-content { 
-    transform: translateY(0); 
-}
-
-/* පොප්-අප් එක වසා දමන (X) බටන් එක */
-.close-btn { 
-    position: absolute; 
-    right: 20px; 
-    top: 15px; 
-    font-size: 30px; 
-    cursor: pointer; 
-    color: var(--text-sub); 
-}
-
-
-/* පිටුවේ පහළම කොටස (Footer) */
-footer { 
-    background: var(--bg-card); 
-    padding: 40px 20px; 
-    text-align: center; 
-    border-top: 1px solid var(--border); 
-    margin-top: 60px; 
-}
-
-/* ජංගම දුරකථන සඳහා විශේෂ සැකසුම් (Mobile Adjustments) */
-@media (max-width: 768px) {
-    .hamburger { 
-        display: flex; 
-    }
-    
-    .nav-links {
-        position: fixed; 
-        top: 0; 
-        right: -100%; 
-        height: 100vh; 
-        width: 80%;
-        background: var(--nav-bg); 
-        flex-direction: column; 
-        justify-content: center;
-        transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1); 
-        box-shadow: -10px 0 30px rgba(0,0,0,0.2);
-    }
-    
-    .nav-links.active { 
-        right: 0; 
-    }
-    
-    .nav-links a { 
-        font-size: 1.2rem; 
-        margin: 15px 0; 
-    }
-}
-
-</style>
-        
+        .union-header { background: var(--accent); color: #000; padding: 40px 20px; border-radius: 20px; text-align: center; margin: 40px 0; font-weight: bold; font-size: 1.3rem; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        .card { background: var(--bg-body); padding: 25px; border-radius: 18px; border: 1px solid var(--border); transition: 0.3s; cursor: pointer; text-align: center; }
+        .card:hover { transform: translateY(-5px); border-color: var(--accent); }
+        .modal { display: none; position: fixed; z-index: 4000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); backdrop-filter: blur(8px); align-items: center; justify-content: center; opacity: 0; transition: opacity 0.3s ease; }
+        .modal.show { display: flex; opacity: 1; }
+        .modal-content { background: var(--bg-card); padding: 35px; border-radius: 25px; width: 90%; max-width: 500px; position: relative; transform: translateY(20px); transition: transform 0.3s ease; }
+        .modal.show .modal-content { transform: translateY(0); }
+        .close-btn { position: absolute; right: 20px; top: 15px; font-size: 30px; cursor: pointer; color: var(--text-sub); }
+        footer { background: var(--bg-card); padding: 40px 20px; text-align: center; border-top: 1px solid var(--border); margin-top: 60px; }
+        @media (max-width: 768px) {
+            .hamburger { display: flex; }
+            .nav-links { position: fixed; top: 0; right: -100%; height: 100vh; width: 80%; background: var(--nav-bg); flex-direction: column; justify-content: center; transition: 0.5s; }
+            .nav-links.active { right: 0; }
+            .nav-links a { font-size: 1.2rem; margin: 15px 0; }
+        }
+    </style>
+</head>
 <body>
-
     <nav>
         <div class="logo">FIM | UOC</div>
-        <div class="hamburger" id="hamburger">
-            <span></span><span></span><span></span>
-        </div>
+        <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
         <div class="nav-links" id="navLinks">
             <a href="#about">පීඨය</a>
             <a href="#history">ඉතිහාසය</a>
-            <a href="#departments">දෙපාර්තමේන්තු</a>
             <a href="#union">ශිෂ්‍ය සංගමය</a>
             <div style="cursor:pointer; font-size: 1.5rem; padding: 10px;" id="themeToggle">🌓</div>
         </div>
     </nav>
-
-<!-- Hero Section -->
-    <header class="hero">
-        <div class="hero-content">
-            <h1>දේශීය වෛද්‍ය පීඨය</h1>
-            <p>කොළඹ විශ්වවිද්‍යාලය</p>
-            <p style="font-size: 1.2rem; margin-top: 10px; max-width: 600px; margin-left: auto; margin-right: auto; opacity: 0.9;">
-                ශ්‍රී ලාංකීය දේශීය වෛද්‍ය ක්‍රමයේ සහ ආයුර්වේද වෛද්‍ය විද්‍යාවේ ප්‍රමුඛතම සහ ගෞරවනීය අධ්‍යාපන කේන්ද්‍රස්ථානය.
-            </p>
-            <a href="#about" class="btn" style="margin-top: 25px;">විස්තර ගවේෂණය කරන්න</a>
+    <div class="hero">
+        <h1>දේශීය වෛද්‍ය පීඨය</h1>
+        <p>කොළඹ විශ්වවිද්‍යාලය</p>
+    </div>
+    <div class="container">
+        <section id="about" class="section">
+            <div class="section-title">පීඨය ගැන හැඳින්වීම</div>
+            <p>ශ්‍රී ලංකාවේ දේශීය වෛද්‍ය අධ්‍යාපනයේ පුරෝගාමියා වන කොළඹ විශ්වවිද්‍යාලයේ දේශීය වෛද්‍ය පීඨය, ගෝලීය වශයෙන් පිළිගත් වෛද්‍යවරුන් බිහි කිරීමේ ප්‍රමුඛතම ආයතනයයි.</p>
+        </section>
+        <section id="history" class="section">
+            <div class="section-title">පීඨ ඉතිහාසය</div>
+            <p>1929 ජූනි 10 වන දින 'ස්වදේශීය වෛද්‍ය විද්‍යාලය' ලෙස ඇරඹි මෙය, 2023 වසරේදී කොළඹ විශ්වවිද්‍යාලයේ 10 වන පීඨය ලෙස නිල වශයෙන් ස්ථාපිත කරන ලදී.</p>
+        </section>
+        <section id="union" class="section">
+            <div class="union-header">දේශීය වෛද්‍ය පීඨ ශිෂ්‍ය සංගමය (FUMS)</div>
+            <div class="grid">
+                <div class="card" onclick="openModal('ක්‍රීඩා අනුකමිටුව', 'පීඨයේ සිසුන්ගේ ක්‍රීඩා කුසලතා ඉහළ නැංවීම සහ වාර්ෂික ක්‍රීඩා උත්සව සංවිධානය කිරීම.')">
+                    <h3>ක්‍රීඩා අනුකමිටුව</h3>
+                    <p style="color:var(--text-sub); font-size:0.9rem; margin-top:5px;">වැඩි විස්තර බලන්න</p>
+                </div>
+                <div class="card" onclick="openModal('සුබසාධක අනුකමිටුව', 'සිසුන්ගේ නේවාසිකාගාර පහසුකම්, ශිෂ්‍යත්ව සහ අනෙකුත් පොදු සුබසාධන කටයුතු භාරව ක්‍රියා කරයි.')">
+                    <h3>සුබසාධක අනුකමිටුව</h3>
+                    <p style="color:var(--text-sub); font-size:0.9rem; margin-top:5px;">වැඩි විස්තර බලන්න</p>
+                </div>
+                <div class="card" onclick="openModal('සංස්කෘතික අනුකමිටුව', 'පීඨයේ කලාත්මක, ආගමික සහ විවිධ සංස්කෘතික වැඩසටහන් මෙහෙයවීම සිදු කරයි.')">
+                    <h3>සංස්කෘතික අනුකමිටුව</h3>
+                    <p style="color:var(--text-sub); font-size:0.9rem; margin-top:5px;">වැඩි විස්තර බලන්න</p>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div id="customModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h2 id="modalTitle" style="color:var(--primary); margin-bottom:15px;"></h2>
+            <p id="modalBody"></p>
         </div>
-    </header>
-
-    </body>
+    </div>
+    <footer>
+        <p>&copy; 2026 Faculty of Indigenous Medicine Students' Union</p>
+    </footer>
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+        const themeToggle = document.getElementById('themeToggle');
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            if (currentTheme === 'dark') { document.documentElement.removeAttribute('data-theme'); } 
+            else { document.documentElement.setAttribute('data-theme', 'dark'); }
+        });
+        function openModal(title, text) {
+            document.getElementById('modalTitle').innerText = title;
+            document.getElementById('modalBody').innerText = text;
+            const modal = document.getElementById('customModal');
+            modal.classList.add('show');
+        }
+        function closeModal() { document.getElementById('customModal').classList.remove('show'); }
+        window.onclick = function(event) {
+            const modal = document.getElementById('customModal');
+            if (event.target == modal) { closeModal(); }
+        }
+    </script>
+</body>
 </html>
